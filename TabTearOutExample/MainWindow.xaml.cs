@@ -48,13 +48,17 @@ public sealed partial class MainWindow : Window
 
     private void Demo_TabTearOutRequested(TabView sender, TabViewTabTearOutRequestedEventArgs args)
     {
-        var tab = args.Tabs.FirstOrDefault() as TabViewItem;
-        if (tab != null)
+        if (_tearOutWindow != null)
         {
-            sender.TabItems.Remove(tab);
-            _tearOutWindow.Demo.TabItems.Add(tab);
+            var tab = args.Tabs.FirstOrDefault() as TabViewItem;
+            if (tab != null)
+            {
+                sender.TabItems.Remove(tab);
+                _tearOutWindow.Demo.TabItems.Add(tab);
+            }
+
+            _tearOutWindow = null;
         }
-        _tearOutWindow = null;
     }
 
     private void Demo_ExternalTornOutTabsDropping(TabView sender, TabViewExternalTornOutTabsDroppingEventArgs args)
