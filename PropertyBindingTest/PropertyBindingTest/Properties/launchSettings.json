@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PropertyBindingTest (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PropertyBindingTest (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
