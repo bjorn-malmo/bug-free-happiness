@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -13,6 +15,7 @@ using Microsoft.UI.Xaml.Navigation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.DirectX.Direct3D11;
+using static System.Net.Mime.MediaTypeNames;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -27,6 +30,8 @@ namespace PropertyBindingTest
         public MainWindow()
         {
             this.InitializeComponent();
+
+            Custom1.PropertyChanged += Custom1_Changed;
         }
 
         private void myButton_Click(object sender, RoutedEventArgs e)
@@ -35,6 +40,12 @@ namespace PropertyBindingTest
             Custom2.ShowMe = true;
             UserControl1.ShowMe = true;
             myButton.Content = "Clicked";
+        }
+
+        void Custom1_Changed(object sender, PropertyChangedEventArgs e)
+        {
+            Debug.WriteLine($"Custom1 property {e.PropertyName} changed");
+
         }
     }
 }
