@@ -7,23 +7,17 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:CustomControl1">
-                    <Border Background="DarkBlue">
-                        <TextBlock Text="Custom1" 
-                                   Visibility="{Binding Path=ShowMe, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+                    <StackPanel Spacing="16"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        
+                        <TextBlock Text="{Binding MyValue, RelativeSource={RelativeSource TemplatedParent}}"/>
 
-    <Style TargetType="local:CustomControl2" >
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="local:CustomControl2">
-                    <Border Background="Blue">
-                        <TextBlock Text="Custom2" 
-                                   Visibility="{Binding Path=ShowMe, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}"/>
-                    </Border>
+                        <Button Content="Update value!" 
+                                Command="{Binding UpdateValueCommand, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        
+                    </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

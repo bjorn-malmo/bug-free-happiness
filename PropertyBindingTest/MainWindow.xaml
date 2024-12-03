@@ -9,11 +9,6 @@
     mc:Ignorable="d"
     Title="PropertyBindingTest">
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="8">
-        <Button x:Name="myButton" Click="myButton_Click">Show all</Button>
-
-        <local:CustomControl1 x:Name="Custom1"/>
-        <local:CustomControl2 x:Name="Custom2"/>
-        <local:UserControl1 x:Name="UserControl1"/>
-    </StackPanel>
+    <Frame SourcePageType="local:TestPage1"/>
+    
 </Window>
