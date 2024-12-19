@@ -16,6 +16,6 @@ public sealed partial class TestPage1 : Page
 
     private void MyControl_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
     {
-        EventFired.Text = "MyControl.PropertyChanged raised";
+        EventFired.Text = $"MyControl.PropertyChanged raised: PropertyName = {e.PropertyName}";
     }
 }
