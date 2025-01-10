@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridSplitter", "GridSplitter\GridSplitter.csproj", "{D118C836-66D0-41C7-931E-B5510B49CBA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|ARM64.Build.0 = Debug|ARM64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|x64.ActiveCfg = Debug|x64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|x64.Build.0 = Debug|x64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|x64.Deploy.0 = Debug|x64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|x86.ActiveCfg = Debug|x86
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|x86.Build.0 = Debug|x86
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Debug|x86.Deploy.0 = Debug|x86
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|ARM64.ActiveCfg = Release|ARM64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|ARM64.Build.0 = Release|ARM64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|ARM64.Deploy.0 = Release|ARM64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|x64.ActiveCfg = Release|x64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|x64.Build.0 = Release|x64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|x64.Deploy.0 = Release|x64
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|x86.ActiveCfg = Release|x86
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|x86.Build.0 = Release|x86
+		{D118C836-66D0-41C7-931E-B5510B49CBA7}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9F8615F-D0BC-4343-9290-100B13E0BE91}
+	EndGlobalSection
+EndGlobal
