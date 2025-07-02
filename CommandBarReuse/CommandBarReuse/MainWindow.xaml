@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="CommandBarReuse.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CommandBarReuse"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="CommandBarReuse">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid x:Name="MainWindowContainer" 
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+          ColumnSpacing="64">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel x:Name="FunctionPanel" Spacing="16">
+            <Button x:Name="Button1" Content="Action 1" 
+                    ContextRequested="Button1_ContextRequested"
+                    >
+                <Button.ContextFlyout >
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Item 1"/>
+                        <MenuFlyoutItem Text="Item 2"/>
+                    </MenuFlyout>
+                </Button.ContextFlyout>
+            </Button>
+
+            <Button Content="Action 2">
+                <Button.ContextFlyout>
+                    <CommandBarFlyout>
+                        <AppBarButton Label="Item 1" Icon="Accept"/>
+                        <AppBarButton Label="Item 2" Icon="Account"/>
+                    </CommandBarFlyout>
+                </Button.ContextFlyout>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" >
+            <Button Content="Just move"
+                    Click="JustMoveButton_Click"/>
+
+            <Button Content="Reassign ContextMenu"
+                    Click="ReassignContextMenuButton_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

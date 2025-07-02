@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CommandBarReuse (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CommandBarReuse (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
