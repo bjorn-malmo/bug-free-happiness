@@ -14,6 +14,19 @@
     </Window.SystemBackdrop>
 
     <Grid Loaded="Grid_Loaded">
-        <Image x:Name="ImageSource" />
+        <Canvas>
+            <Image x:Name="ImageSource" 
+                   PointerMoved="ImageSource_PointerMoved" 
+                   Height="400"/>
+        </Canvas>
+        <TextBlock x:Name="RegionId" VerticalAlignment="Center" HorizontalAlignment="Center" Text=""/>
+
+        <Viewbox x:Name="Test" Width="200" Height="200">
+            <!--<Path Fill="Gold" Stroke="Red" StrokeThickness="1">
+                <Path.Data>
+                    <Path x:Name="Highlite" />
+                </Path.Data>
+            </Path>-->
+        </Viewbox>
     </Grid>
 </Window>
